@@ -1,6 +1,6 @@
 # OBS 24/7 Playout Plugin
 
-Aktuelle Version: `0.7.98`
+Aktuelle Version: `0.8.3`
 
 Ziel: ein echtes OBS-Plugin mit Dock, das einen 24/7 Twitch-Channel als Playout-System steuert.
 
@@ -277,4 +277,9 @@ channel:manage:broadcast channel:edit:commercial chat:read chat:edit user:write:
 - Die Build-/Package-Version steht in `buildspec.json`.
 - Beide werden bei jedem neuen Update gemeinsam aktualisiert.
 - Die JSON-Konfigurationsversion ist davon getrennt und dient nur fuer Datenmigrationen.
+
+## License
+
+This project is licensed under the GNU General Public License v2.0 or later.
+See the `LICENSE` file for details.
 
