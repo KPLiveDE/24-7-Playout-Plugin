@@ -238,14 +238,6 @@ dist\OBS-Studio\
 - Nach jedem Update wird ein eigenes fortlaufendes Backup unter `backups/` abgelegt.
 - Remote-/YouTube-Links erhalten beim Start eine kurze Lade-Schutzzeit, damit OBS nicht sofort zum naechsten Eintrag springt.
 
-## Offene To-dos
-
-- Aktuell weiter: Konfigurationsschutz und Wiederherstellung weiter absichern.
-- Zurueckgestellt: YouTube-HD/1080p mit ffmpeg stabilisieren; progressiver Stream bleibt der stabile Fallback.
-- Zurueckgestellt: Werbung/Transition-Feinschliff weiter testen, falls im echten Betrieb Timing-Probleme auftreten.
-- Zurueckgestellt: Release-ZIP/Installer erst wieder erzeugen, wenn der Funktionsstand finaler ist.
-- Dauerhaft beibehalten: Fortlaufende Backups nach jedem Update unter `backups/`.
-
 ## Erledigter Sendeplan-Stand
 
 - Sendeplan mit echter Uhrzeit, Startzeit, Gesamtlaufzeit und geplanten Slot-Zeiten.
