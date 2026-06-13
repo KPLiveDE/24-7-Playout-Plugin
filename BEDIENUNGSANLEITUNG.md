@@ -1,10 +1,10 @@
-# OBS 24/7 Playout - Bedienungsanleitung
+﻿# 24/7 Playout - Bedienungsanleitung
 
-Diese Anleitung erklaert die Installation und die wichtigsten Funktionen des OBS-Plugins `OBS 24/7 Playout`.
+Diese Anleitung erklaert die Installation und die wichtigsten Funktionen des Drittanbieter-Plugins `24/7 Playout` fuer OBS Studio.
 
 ## Was macht das Plugin?
 
-`OBS 24/7 Playout` ist ein Playout-Dashboard direkt in OBS Studio. Es kann Videos in einer Sendeliste abspielen, automatisch zur naechsten Sendung wechseln, Werbung ueber eine eigene OBS-Szene einplanen, Twitch-Kategorien und Stream-Titel aktualisieren und Overlays wie Programmtafel oder Info-Banner bereitstellen.
+`24/7 Playout` ist ein Playout-Dashboard direkt in OBS Studio. Es kann Videos in einer Sendeliste abspielen, automatisch zum naechsten Video wechseln, Werbung ueber eine eigene OBS-Szene einplanen, Twitch-Kategorien, Stream-Titel und Chat-Nachrichten aktualisieren und Overlays wie Programmtafel, Info-Banner und Info-Grafik bereitstellen.
 
 ## Voraussetzungen
 
@@ -26,7 +26,7 @@ D:\Programme\OBS-Studio-32.1.2-Windows-x64
 
 4. Beim Kopieren duerfen die Ordner zusammengefuehrt werden.
 5. OBS Studio starten.
-6. In OBS unter `Docks` das Dock `24/7 Playout` oeffnen.
+6. In OBS unter `Werkzeuge > 24/7 Playout` das Plugin-Fenster oeffnen.
 
 Die Zielstruktur sieht danach ungefaehr so aus. Je nach Release-Paket koennen optionale Hilfsprogramme wie `ffmpeg.exe` fehlen; das Plugin selbst besteht aus der DLL und den Daten im Plugin-Ordner.
 
@@ -34,10 +34,10 @@ Die Zielstruktur sieht danach ungefaehr so aus. Je nach Release-Paket koennen op
 OBS-Studio/
   obs-plugins/
     64bit/
-      obs-247-playout-plugin.dll
+      playout-247-plugin.dll
   data/
     obs-plugins/
-      obs-247-playout-plugin/
+      playout-247-plugin/
         yt-dlp.exe
         ffmpeg.exe   optional
         locale/
@@ -88,9 +88,11 @@ Wichtige Buttons:
 - `Duplizieren`: Eintrag kopieren
 - `Aktiv an/aus`: Eintrag aktivieren oder deaktivieren
 - `Werbung an/aus`: Werbung nach diesem Video aktivieren oder deaktivieren
-- `Metadaten`: Titel, Kapitel und Chat-Nachricht pro Video bearbeiten
-- `Kapitel`: Video einem Sendeplan-Kapitel zuordnen
+- `Metadaten`: Titel, Info-Grafik und Chat-Nachricht pro Video bearbeiten
+- `Marker`: visuelle Orientierung direkt im Rundown setzen
 - `Entfernen`: Eintrag aus der Sendeliste entfernen
+
+Marker sind reine Orientierungshilfen. Sie beeinflussen weder Playback noch Reihenfolge. Die angezeigte Marker-Zeit stammt vom geplanten Start des darunterliegenden Videos.
 
 ### Metadaten pro Video
 
@@ -98,7 +100,7 @@ Im Dialog `Metadaten` kannst du pro Sendelisten-Eintrag festlegen:
 
 - ob der Videoname als Stream-Titel genutzt wird
 - eigener Stream-Titel
-- Kapitel / Daypart
+- Info-Grafik fuer die Browserquelle
 - ob nach dem Video Werbung abgespielt werden soll
 - ob eine Chat-Nachricht gesendet werden soll
 - individuelle Chat-Nachricht
@@ -121,25 +123,16 @@ Typischer Ablauf:
 3. Werbedauer einstellen, z.B. 30 Sekunden.
 4. Optional Vorlauf/Nachlauf fuer Stinger-Transitions einstellen.
 
-## Sendeplan
+## Marker im Rundown
 
-Im Tab `Sendeplan` bekommst du eine TV-artige Planung mit echten Uhrzeiten.
+Marker sind bewusst einfach gehalten und dienen nur als visuelle Orientierung:
 
-Moeglichkeiten:
-
-- Startzeit sehen
-- Gesamtlaufzeit anzeigen
-- geplantes Ende sehen
-- Kapitel/Dayparts anlegen
-- Videos Kapiteln zuweisen
-- Kapitel sortieren oder mischen
-- aktuellen Slot und Live-Abgleich sehen
-
-Beispiele fuer Kapitel:
-
-- `Guten Morgen`
-- `LetsPlay am Mittag`
-- `Abendprogramm`
+- Marker stehen direkt in der Playlist/Rundown-Liste.
+- Marker koennen zwischen Videos verschoben werden.
+- Marker koennen wie Videos ausgewaehlt und entfernt werden.
+- Marker sind gruen hervorgehoben.
+- Marker haben keine automatische Abspielfunktion.
+- Die Videos laufen weiterhin in der normalen Rundown-Reihenfolge.
 
 ## Twitch
 
@@ -163,6 +156,7 @@ Das Plugin erzeugt lokale Browserquellen fuer:
 
 - Programmtafel
 - Info-Banner
+- Info-Grafik
 
 Diese Quellen koennen in OBS als Browser Source eingebunden werden.
 
@@ -174,6 +168,14 @@ http://127.0.0.1:24713/infobanner.html
 ```
 
 Die Programmtafel aktualisiert sich passend zum Playout, z.B. bei Werbung oder Video-Wechsel.
+
+Empfohlene Browserquellen-Aufloesung:
+
+```text
+1920 x 1080
+```
+
+Die Browserquellen sind responsive. Wenn eine andere Groesse verwendet wird, bleiben Proportionen und Layout erhalten. Die Programmtafel ist transparent, sodass eigene Bilder, Videos oder Szenen darunter liegen koennen.
 
 ## Tastatursteuerung
 
@@ -234,13 +236,13 @@ https://www.ffmpeg.org/download.html
 Kopiere nur die Datei `ffmpeg.exe` in diesen Plugin-Ordner innerhalb deiner OBS-Installation:
 
 ```text
-OBS-Studio\data\obs-plugins\obs-247-playout-plugin\ffmpeg.exe
+OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
 ```
 
 Beispiel:
 
 ```text
-D:\Programme\OBS-Studio-32.1.2-Windows-x64\data\obs-plugins\obs-247-playout-plugin\ffmpeg.exe
+D:\Programme\OBS-Studio-32.1.2-Windows-x64\data\obs-plugins\playout-247-plugin\ffmpeg.exe
 ```
 
 Danach OBS Studio komplett neu starten.
@@ -251,10 +253,10 @@ Fortgeschrittene Nutzer koennen `ffmpeg.exe` auch in einen Ordner legen, der in 
 
 ## Fehlerbehebung
 
-### Dock wird nicht angezeigt
+### Plugin-Fenster wird nicht angezeigt
 
 - OBS neu starten.
-- Unter `Docks` nach `24/7 Playout` suchen.
+- Unter `Werkzeuge` nach `24/7 Playout` suchen.
 - Pruefen, ob die DLL im richtigen OBS-Ordner liegt.
 
 ### Video startet nicht
@@ -284,4 +286,7 @@ Fortgeschrittene Nutzer koennen `ffmpeg.exe` auch in einen Ordner legen, der in 
 2. Neue Plugin-Version entpacken.
 3. Inhalt des Ordners `OBS-Studio` ueber die bestehende OBS-Installation kopieren.
 4. OBS Studio starten.
-5. Version oben im Plugin-Dock pruefen.
+5. Version oben im Plugin-Fenster pruefen.
+
+
+

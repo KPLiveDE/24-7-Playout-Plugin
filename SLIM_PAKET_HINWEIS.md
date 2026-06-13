@@ -1,16 +1,21 @@
-﻿# Slim-Paket Hinweis
+﻿# Slim-Paket-Hinweis
 
-Dieses Paket enthaelt das OBS 24/7 Playout Plugin ohne `ffmpeg.exe` und ohne Debug-Datei (`.pdb`).
+Dieses Slim-Paket enthaelt die Dateien fuer 24/7 Playout, aber keine Debug-Symbole (.pdb) und kein fmpeg.exe.
 
-Geeignet fuer Nutzer, die ein kleineres Download-Paket bevorzugen oder FFmpeg bereits separat installiert haben.
+Enthalten:
 
-Wenn lokale/Online-Videoanalyse oder spaetere Diagnosefunktionen FFmpeg benoetigen, nutze stattdessen das normale Full-Paket.
+- OBS-Studio\obs-plugins\64bit\playout-247-plugin.dll
+- OBS-Studio\data\obs-plugins\playout-247-plugin\yt-dlp.exe
+- OBS-Studio\data\obs-plugins\playout-247-plugin\locale\en-US.ini
+- README, Lizenz und Dokumentation
 
-Alternativ kann FFmpeg separat heruntergeladen werden:
+fmpeg.exe ist optional. Fuer lokale Videos und viele direkte Videolinks funktioniert das Plugin auch ohne diese Datei.
+Wenn du fmpeg.exe nachinstallieren moechtest, lade FFmpeg ueber die offizielle Seite herunter:
 
-https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+https://www.ffmpeg.org/download.html
 
-Nach dem Entpacken liegt die Datei unter `bin\ffmpeg.exe`.
-Diese `ffmpeg.exe` kann in den Plugin-Datenordner kopiert werden:
+Kopiere danach nur die Datei fmpeg.exe in diesen Ordner deiner OBS-Installation:
 
-`OBS-Studio\data\obs-plugins\obs-247-playout-plugin\ffmpeg.exe`
+OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
+
+OBS Studio danach komplett neu starten.
