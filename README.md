@@ -1,4 +1,4 @@
-# 24/7 Playout
+# 24/7 Playout OBS-Plugin
 
 Current version: `0.8.18`
 
