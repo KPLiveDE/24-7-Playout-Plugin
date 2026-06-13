@@ -14,7 +14,7 @@ Wenn du fmpeg.exe nachinstallieren moechtest, lade ffmpeg ueber die offizielle 
 
 https://www.ffmpeg.org/download.html
 
-Kopiere danach nur die Datei fmpeg.exe in diesen Ordner deiner OBS-Installation:
+Kopiere danach nur die Datei ffmpeg.exe in diesen Ordner deiner OBS-Installation:
 
 OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
 
