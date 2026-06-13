@@ -25,7 +25,7 @@ Automated 24/7 playout control for OBS Studio, Twitch streams, ads and transpare
 ```markdown
 # 24/7 Playout
 
-24/7 Playout is a third-party OBS Studio plugin for creators who want to run structured 24/7 livestreams with local video playlists, Twitch automation, ad handling and transparent stream overlays directly inside OBS.
+24/7 Playout is an OBS Studio plugin for creators who want to run structured 24/7 livestreams with local video playlists, Twitch automation, ad handling and transparent stream overlays directly inside OBS.
 
 The plugin helps you manage continuous playout inside OBS without relying on a separate broadcast tool. You can build a media library, create a playlist/rundown, display Now/Next information, place visual markers in the rundown and automatically update Twitch titles, Twitch categories, chat messages and ads based on the currently running program.
 
@@ -115,7 +115,7 @@ The overlays are responsive, so their proportions stay intact even when a differ
 
 24/7 Playout keeps the playout workflow directly inside OBS and opens in a dedicated Tools window with enough space for larger rundowns and continuous stream operation.
 
-This is a third-party plugin and is not affiliated with or endorsed by OBS Studio. For major updates, it is recommended to back up your existing configuration first.
+This plugin is not affiliated with or endorsed by OBS Studio. For major updates, it is recommended to back up your existing configuration first.
 
 Screenshots and setup examples can be added below.
 ```
@@ -125,7 +125,7 @@ Screenshots and setup examples can be added below.
 ```markdown
 # 24/7 Playout
 
-24/7 Playout ist ein Drittanbieter-Plugin fuer OBS Studio. Es hilft Creatorn dabei, lange oder dauerhafte Playout-Streams direkt in OBS vorzubereiten und zu steuern.
+24/7 Playout ist ein Plugin fuer OBS Studio. Es hilft Creatorn dabei, lange oder dauerhafte Playout-Streams direkt in OBS vorzubereiten und zu steuern.
 
 Das Plugin wird ueber das OBS-Menue `Werkzeuge` geoeffnet und bietet ein eigenes Steuerfenster fuer Mediathek, Playlist/Rundown, Twitch-Automation, Werbung und Browser-Overlays.
 
@@ -185,7 +185,7 @@ Nach der Twitch-Autorisierung kann das Plugin automatisch:
 
 24/7 Playout haelt den Playout-Workflow direkt in OBS und oeffnet ein eigenes Werkzeuge-Fenster mit genug Platz fuer groessere Rundowns und den Dauerbetrieb.
 
-Dieses Plugin ist ein Drittanbieter-Plugin und nicht offiziell mit OBS Studio verbunden.
+Dieses Plugin ist nicht offiziell mit OBS Studio verbunden.
 Vor groesseren Updates wird empfohlen, die bestehende Konfiguration zu sichern.
 ```
 

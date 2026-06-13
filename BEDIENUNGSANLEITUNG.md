@@ -1,6 +1,6 @@
 ﻿# 24/7 Playout - Bedienungsanleitung
 
-Diese Anleitung erklaert die Installation und die wichtigsten Funktionen des Drittanbieter-Plugins `24/7 Playout` fuer OBS Studio.
+Diese Anleitung erklaert die Installation und die wichtigsten Funktionen des Plugins `24/7 Playout` fuer OBS Studio.
 
 ## Was macht das Plugin?
 

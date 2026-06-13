@@ -1,47 +1,47 @@
 # 24/7 Playout
 
-Aktuelle Version: `0.8.18`
+Current version: `0.8.18`
 
-`24/7 Playout` ist ein Drittanbieter-Plugin fuer OBS Studio. Es richtet sich an Creator, die lange oder dauerhafte Playout-Streams vorbereiten und direkt in OBS steuern moechten.
+`24/7 Playout` is an OBS Studio plugin for creators who want to prepare and control long-form or always-on livestreams directly inside OBS.
 
-Das Plugin oeffnet seine Oberflaeche ueber `Werkzeuge > 24/7 Playout` und verwaltet Mediathek, Playlist/Rundown, Werbung, Twitch-Automation und Browser-Overlays in einem eigenen Fenster.
+The plugin opens from the OBS Tools menu via `Tools > 24/7 Playout` and provides a dedicated control window for media library management, playlist/rundown playback, ads, Twitch automation and browser overlays.
 
-## Hauptfunktionen
+## Features
 
-- Mediathek fuer lokale Videos, Ordnerimporte und Video-Links.
-- Drag and Drop fuer lokale Videos und Ordner in die Mediathek.
-- Playlist/Rundown mit geplanten Start- und Endzeiten.
-- Visuelle Marker direkt im Rundown als reine Orientierung, ohne Einfluss auf Playback oder Sortierung.
-- Marker koennen verschoben, ausgewaehlt und entfernt werden.
-- Now/Next-Anzeige mit Fortschritt und Restzeit.
-- Dedizierte OBS Media Source `24/7 Playout Feed`.
-- Automatisches Einfuegen des Playout-Feeds in die aktuelle OBS-Szene.
-- Endlos-Loop, Shuffle-Modus, Autostart und optionales Fortsetzen des letzten Rundown-Eintrags.
-- Metadaten pro Rundown-Eintrag: eigener Stream-Titel, Titel aus Videonamen, Chat-Nachricht, Info-Grafik und Werbung nach dem Video.
-- Stream-Titel-Prefix und -Suffix mit frei waehlbaren Trennern, inklusive Leerzeichen oder Emojis.
-- Twitch-Integration fuer automatische Kategorie-Wechsel, Stream-Titel, Chat-Nachrichten und Twitch-Werbepausen.
-- Twitch OAuth direkt aus dem Plugin mit Statusanzeige fuer fehlende Scopes.
-- Werbe-Modi: Twitch-Werbung, nur Werbeszene/Programmtafel oder Werbung aus.
-- Eigene OBS-Werbeszene mit Vorlauf/Nachlauf.
-- Browserquellen fuer Programmtafel, Info-Banner und Info-Grafik.
-- Transparente Programmtafel, damit eigene Hintergruende oder Szenen darunter sichtbar bleiben.
-- Responsive Browserquellen, damit Proportionen bei unterschiedlichen Quellgroessen erhalten bleiben.
-- Overlay-Farben fuer Programmtafel und Info-Banner inklusive Farbdialog und Speicherung.
-- Deutsch/Englisch umschaltbare Oberflaeche.
-- Konfigurationsschutz mit Schutzkopie, Auto-Wiederherstellung und atomischem Speichern.
-- Import, Export und Backup-Wiederherstellung der Konfiguration.
-- Tastatursteuerung fuer Listen, Suche, Auswahl und Entfernen.
+- Media library for local videos, folder imports and video links
+- Drag and drop support for local videos and folders
+- Playlist / rundown with planned start and end times
+- Visual markers directly inside the rundown for orientation only, without affecting playback or sorting
+- Markers can be moved, selected and removed
+- Now / Next display with progress and remaining time
+- Dedicated OBS media source named `24/7 Playout Feed`
+- Automatic insertion of the playout feed into the current OBS scene
+- Loop mode, shuffle mode, autostart and optional resume support
+- Per-rundown-entry metadata for custom stream titles, video-name titles, chat messages, info graphics and ads after videos
+- Stream title prefix and suffix support with custom separators, including spaces or emojis
+- Twitch integration for automatic category changes, stream title updates, chat messages and Twitch ad breaks
+- Twitch OAuth directly from the plugin, including status information for missing scopes
+- Ad modes for Twitch ads, ad scene/program board mode or ads off
+- Dedicated OBS ad scene with pre-roll and post-roll timing
+- Browser overlays for program board, info banner and info graphic
+- Transparent program board, so custom backgrounds or scenes can remain visible underneath
+- Responsive browser overlays that keep their proportions at different source sizes
+- Custom overlay colors for program board and info banner, including color picker and saved settings
+- English and German UI language support
+- Configuration protection with backup copy, auto-recovery and safer atomic saving
+- Configuration import, export and backup restore
+- Keyboard shortcuts for lists, search, selection and removal
 
 ## Installation
 
-1. OBS Studio vollstaendig schliessen.
-2. ZIP herunterladen und entpacken.
-3. Den Inhalt des Ordners `OBS-Studio` in den OBS-Studio-Installationsordner kopieren.
-4. Ordner beim Kopieren zusammenfuehren.
-5. OBS Studio starten.
-6. In OBS `Werkzeuge > 24/7 Playout` oeffnen.
+1. Close OBS Studio completely.
+2. Download and extract the ZIP file.
+3. Copy the contents of the `OBS-Studio` folder into your OBS Studio installation folder.
+4. Merge folders when Windows asks.
+5. Start OBS Studio.
+6. Open `Tools > 24/7 Playout`.
 
-Die Zielstruktur sieht danach so aus:
+The target structure should look like this:
 
 ```text
 OBS-Studio/
@@ -52,99 +52,99 @@ OBS-Studio/
     obs-plugins/
       playout-247-plugin/
         yt-dlp.exe
-        ffmpeg.exe   optional, nur im Full-Paket enthalten
+        ffmpeg.exe   optional, included only in the Full package
         locale/
           en-US.ini
 ```
 
-## Full- und Slim-Paket
+## Full And Slim Packages
 
-Das Full-Paket ist fuer OBS-Plugins/OBS-Forum gedacht und enthaelt:
+The Full package is intended for OBS plugin/resource uploads and contains:
 
-- Plugin-DLL
-- Debug-Symbole (`.pdb`)
+- Plugin DLL
+- Debug symbols (`.pdb`)
 - `yt-dlp.exe`
 - `ffmpeg.exe`
-- Dokumentation und Lizenz
+- Documentation and license
 
-Das Slim-Paket ist fuer GitHub oder kleinere Downloads gedacht und enthaelt keine `.pdb` und kein `ffmpeg.exe`.
+The Slim package is intended for GitHub or smaller downloads and does not include `.pdb` files or `ffmpeg.exe`.
 
-`ffmpeg.exe` kann bei Bedarf ueber die offizielle FFmpeg-Seite nachinstalliert werden:
+If needed, `ffmpeg.exe` can be installed manually from the official FFmpeg website:
 
 ```text
 https://www.ffmpeg.org/download.html
 ```
 
-Danach die Datei hier ablegen:
+Then place the file here:
 
 ```text
 OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
 ```
 
-## Browserquellen
+## Browser Overlays
 
-Die Browserquellen sollten in OBS als Browser Source eingebunden werden. Empfohlene Groesse:
+The browser overlays should be added to OBS as Browser Sources. Recommended size:
 
 ```text
 1920 x 1080
 ```
 
-Die Quellen sind responsive aufgebaut. Andere Groessen funktionieren ebenfalls, die Proportionen bleiben erhalten.
+The overlays are responsive. Other source sizes also work, while the proportions stay intact.
 
-Die Programmtafel ist transparent und kann in OBS ueber eigene Bilder, Videos oder Szenen gelegt werden.
+The program board is transparent and can be placed above custom images, videos or scenes in OBS.
 
 ## Twitch
 
-Fuer Twitch-Funktionen muss das Plugin autorisiert werden. Danach kann es automatisch:
+Twitch features require authorization inside the plugin. After authorization, the plugin can automatically:
 
-- Stream-Titel aktualisieren
-- Twitch-Kategorie wechseln
-- Chat-Nachrichten pro Video senden
-- Twitch-Werbepausen ausloesen
+- Update the stream title
+- Switch the Twitch category
+- Send per-video chat messages
+- Start Twitch ad breaks
 
-Benutzte Scopes:
+Used scopes:
 
 ```text
 channel:manage:broadcast channel:edit:commercial chat:read chat:edit user:write:chat
 ```
 
-## Build-Hinweis
+## Build Notes
 
-Der aktuelle lokale Build wurde mit dem offiziellen Template-Dependency-Stand `obs-studio 31.1.1` erstellt.
+The current local build was created with the official template dependency state `obs-studio 31.1.1`.
 
-Typischer Build:
+Typical build:
 
 ```powershell
 cmake -S . -B build
 cmake --build build --config RelWithDebInfo
 ```
 
-Aktuelles Build-Ziel:
+Current build output:
 
 ```text
 build-template\RelWithDebInfo\playout-247-plugin.dll
 dist\OBS-Studio\obs-plugins\64bit\playout-247-plugin.dll
 ```
 
-## Release-Pakete erstellen
+## Create Release Packages
 
 ```powershell
 .\tools\package-release.ps1
 ```
 
-Wenn vorhandene Release-Artefakte ersetzt werden sollen:
+To overwrite existing release artifacts:
 
 ```powershell
 .\tools\package-release.ps1 -Overwrite
 ```
 
-## Versionierung
+## Versioning
 
-- Sichtbare Plugin-Version: `src/plugin-version.hpp`
-- Build-/Paket-Version: `buildspec.json`
-- Projektstand: `PROJECT_MEMORY.md`
+- Visible plugin version: `src/plugin-version.hpp`
+- Build/package version: `buildspec.json`
+- Project notes: `PROJECT_MEMORY.md`
 
-## Lizenz
+## License
 
 This project is licensed under the GNU General Public License v2.0 or later.
 See the `LICENSE` file for details.
