@@ -1,20 +1,26 @@
-This slim package contains the files required for 24/7 Playout, but does not include debug symbols (.pdb) or ffmpeg.exe.
+# Slim Package Notice
 
-Included Files
-OBS-Studio\obs-plugins\64bit\playout-247-plugin.dll
-OBS-Studio\data\obs-plugins\playout-247-plugin\yt-dlp.exe
-OBS-Studio\data\obs-plugins\playout-247-plugin\locale\en-US.ini
-README, license, and documentation files
-About ffmpeg.exe
+This slim package contains the files required for **24/7 Playout**, but does **not** include debug symbols (`.pdb`) or `ffmpeg.exe`.
 
-ffmpeg.exe is optional. The plugin works without it for local video files and many direct video URLs.
+## Included Files
 
-If you would like to install ffmpeg.exe, download FFmpeg from the official website:
+- `OBS-Studio\obs-plugins\64bit\playout-247-plugin.dll`
+- `OBS-Studio\data\obs-plugins\playout-247-plugin\yt-dlp.exe`
+- `OBS-Studio\data\obs-plugins\playout-247-plugin\locale\en-US.ini`
+- README, license, and documentation files
 
-FFmpeg Download Page
+## About `ffmpeg.exe`
 
-After downloading, copy only the ffmpeg.exe file into the following directory of your OBS installation:
+`ffmpeg.exe` is optional. The plugin works without it for local video files and many direct video URLs.
 
+If you would like to install `ffmpeg.exe`, download FFmpeg from the official website:
+
+https://www.ffmpeg.org/download.html
+
+After downloading, copy only the `ffmpeg.exe` file into the following directory of your OBS installation:
+
+```text
 OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
+```
 
-Once completed, fully restart OBS Studio.
+Afterwards, completely restart OBS Studio.
