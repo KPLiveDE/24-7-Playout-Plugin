@@ -228,6 +228,5 @@ Vor groesseren Updates wird empfohlen, die bestehende Konfiguration zu sichern.
 - Fuer OBS-Plugins/OBS-Forum: `24-7-Playout-v0.8.18-windows-x64-full.zip`
 - Fuer GitHub Release: `24-7-Playout-v0.8.18-windows-x64-slim.zip`
 - Repository: `https://github.com/KPLiveDE/24-7-Playout-Plugin`
-- OBS Resource: `https://obsproject.com/forum/resources/24-7-playout-obs-plugin.2530/`
 
 Wenn die OBS-Resource-Seite den Namen der URL nicht sofort aendert, ist das normal. Wichtig ist der sichtbare Resource-Titel `24/7 Playout`.
