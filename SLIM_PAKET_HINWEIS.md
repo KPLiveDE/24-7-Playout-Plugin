@@ -10,7 +10,7 @@ Enthalten:
 - README, Lizenz und Dokumentation
 
 fmpeg.exe ist optional. Fuer lokale Videos und viele direkte Videolinks funktioniert das Plugin auch ohne diese Datei.
-Wenn du fmpeg.exe nachinstallieren moechtest, lade FFmpeg ueber die offizielle Seite herunter:
+Wenn du fmpeg.exe nachinstallieren moechtest, lade ffmpeg ueber die offizielle Seite herunter:
 
 https://www.ffmpeg.org/download.html
 
