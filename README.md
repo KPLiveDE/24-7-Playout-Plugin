@@ -1,150 +1,126 @@
-# 24/7 Playout OBS-Plugin
+# 24/7 Playout v0.8.18 - OBS Plugin
 
-Current version: `0.8.18`
+24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, ad handling and transparent browser overlays directly inside OBS.
 
-`24/7 Playout` is an OBS Studio plugin for creators who want to prepare and control long-form or always-on livestreams directly inside OBS.
+This release provides the Windows x64 installer and the Windows x64 ZIP package. The ZIP package includes the plugin DLL, debug symbols, `yt-dlp.exe`, `ffmpeg.exe`, documentation and the GPL license file.
 
-The plugin opens from the OBS Tools menu via `Tools > 24/7 Playout` and provides a dedicated control window for media library management, playlist/rundown playback, ads, Twitch automation and browser overlays.
 
-## Features
+## Screenshots
 
-- Media library for local videos, folder imports and video links
-- Drag and drop support for local videos and folders
-- Playlist / rundown with planned start and end times
-- Visual markers directly inside the rundown for orientation only, without affecting playback or sorting
-- Markers can be moved, selected and removed
-- Now / Next display with progress and remaining time
+### Main control window
+
+![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-13%20151008.png)
+
+### Interface and overlay examples
+
+![24/7 Playout interface screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20202907.png)
+
+![24/7 Playout interface screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203101.png)
+
+![24/7 Playout overlay screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203848.png)
+
+![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203821.png)
+
+### Twitch Integration and Video Edit
+
+![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203635.png)
+
+![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20204021.png)
+
+![24/7 Playout overlay screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20204036.png)
+
+![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203657.png)
+
+## Highlights
+
+- OBS Tools menu integration via `Tools > 24/7 Playout`
+- Local media library for videos, folders and video links
+- Drag and drop support for videos and folders
+- Playlist / rundown management for continuous playout
+- Planned start and end times based on the current rundown
+- Live rundown timing updates during playback and video changes
+- Visual rundown markers for orientation without changing playback behavior
+- Now / Next display with progress, remaining time and upcoming video information
 - Dedicated OBS media source named `24/7 Playout Feed`
-- Automatic insertion of the playout feed into the current OBS scene
-- Loop mode, shuffle mode, autostart and optional resume support
-- Per-rundown-entry metadata for custom stream titles, video-name titles, chat messages, info graphics and ads after videos
-- Stream title prefix and suffix support with custom separators, including spaces or emojis
-- Twitch integration for automatic category changes, stream title updates, chat messages and Twitch ad breaks
-- Twitch OAuth directly from the plugin, including status information for missing scopes
-- Ad modes for Twitch ads, ad scene/program board mode or ads off
-- Dedicated OBS ad scene with pre-roll and post-roll timing
-- Browser overlays for program board, info banner and info graphic
-- Transparent program board, so custom backgrounds or scenes can remain visible underneath
-- Responsive browser overlays that keep their proportions at different source sizes
-- Custom overlay colors for program board and info banner, including color picker and saved settings
+- OBS scene integration for playout and ad scenes
+- Twitch automation for stream titles, categories, chat messages and ad breaks
+- Stream title prefix and suffix support
+- Optional ad mode with Twitch ads, ad scene/program board mode or ads off
+- Transparent and responsive browser overlays for program board, info banner and info graphic
+- Customizable overlay colors
+- Loop mode, shuffle mode, autostart and resume support
+- Optional OBS stream auto-reconnect for long Twitch streams
 - English and German UI language support
-- Configuration protection with backup copy, auto-recovery and safer atomic saving
-- Configuration import, export and backup restore
-- Keyboard shortcuts for lists, search, selection and removal
+- Configuration backup, restore, auto-recovery and safer saving
 
 ## Installation
 
+### Option 1: Installer
+
 1. Close OBS Studio completely.
-2. Download and extract the ZIP file.
-3. Copy the contents of the `OBS-Studio` folder into your OBS Studio installation folder.
-4. Merge folders when Windows asks.
+2. Download and run `24-7-Playout-v0.8.18-windows-x64-installer.exe`.
+3. Select your OBS Studio installation folder.
+4. Complete the installation.
 5. Start OBS Studio.
 6. Open `Tools > 24/7 Playout`.
 
-The target structure should look like this:
+### Option 2: Manual ZIP Installation
+
+1. Close OBS Studio completely.
+2. Download `24-7-Playout-v0.8.18-windows-x64.zip`.
+3. Extract the ZIP file.
+4. Copy the contents of the `OBS-Studio` folder into your OBS Studio installation folder.
+5. Merge folders when Windows asks.
+6. Start OBS Studio.
+7. Open `Tools > 24/7 Playout`.
+
+The installed structure should look like this:
 
 ```text
 OBS-Studio/
   obs-plugins/
     64bit/
       playout-247-plugin.dll
+      playout-247-plugin.pdb
   data/
     obs-plugins/
       playout-247-plugin/
+        ffmpeg.exe
         yt-dlp.exe
-        ffmpeg.exe   optional, included only in the Full package
         locale/
           en-US.ini
 ```
 
-## Full And Slim Packages
+## Browser Sources
 
-The Full package is intended for OBS plugin/resource uploads and contains:
+The program board, info banner and info graphic are transparent, responsive OBS browser overlays. They can be used at different browser source sizes while keeping their proportions intact, and can be placed above custom backgrounds, images, videos or stream graphics.
 
-- Plugin DLL
-- Debug symbols (`.pdb`)
-- `yt-dlp.exe`
-- `ffmpeg.exe`
-- Documentation and license
 
-The Slim package is intended for GitHub or smaller downloads and does not include `.pdb` files or `ffmpeg.exe`.
 
-If needed, `ffmpeg.exe` can be installed manually from the official FFmpeg website:
+## Notes
 
-```text
-https://www.ffmpeg.org/download.html
-```
+- This is a Windows x64 release.
+- OBS Studio 32.x or a compatible version is recommended.
+- Twitch automation requires Twitch authorization inside the plugin.
+- After updating the plugin, restart OBS Studio completely.
+- Source code is available in this repository.
 
-Then place the file here:
+## Download
+
+Recommended for most Windows users:
 
 ```text
-OBS-Studio\data\obs-plugins\playout-247-plugin\ffmpeg.exe
+24-7-Playout-v0.8.18-windows-x64-installer.exe
 ```
 
-## Browser Overlays
-
-The browser overlays should be added to OBS as Browser Sources. Recommended size:
+Manual installation package:
 
 ```text
-1920 x 1080
+24-7-Playout-v0.8.18-windows-x64.zip
 ```
 
-The overlays are responsive. Other source sizes also work, while the proportions stay intact.
-
-The program board is transparent and can be placed above custom images, videos or scenes in OBS.
-
-## Twitch
-
-Twitch features require authorization inside the plugin. After authorization, the plugin can automatically:
-
-- Update the stream title
-- Switch the Twitch category
-- Send per-video chat messages
-- Start Twitch ad breaks
-
-Used scopes:
+Source code archive:
 
 ```text
-channel:manage:broadcast channel:edit:commercial chat:read chat:edit user:write:chat
+24-7-Playout-v0.8.18-source.zip
 ```
-
-## Build Notes
-
-The current local build was created with the official template dependency state `obs-studio 31.1.1`.
-
-Typical build:
-
-```powershell
-cmake -S . -B build
-cmake --build build --config RelWithDebInfo
-```
-
-Current build output:
-
-```text
-build-template\RelWithDebInfo\playout-247-plugin.dll
-dist\OBS-Studio\obs-plugins\64bit\playout-247-plugin.dll
-```
-
-## Create Release Packages
-
-```powershell
-.\tools\package-release.ps1
-```
-
-To overwrite existing release artifacts:
-
-```powershell
-.\tools\package-release.ps1 -Overwrite
-```
-
-## Versioning
-
-- Visible plugin version: `src/plugin-version.hpp`
-- Build/package version: `buildspec.json`
-- Project notes: `PROJECT_MEMORY.md`
-
-## License
-
-This project is licensed under the GNU General Public License v2.0 or later.
-See the `LICENSE` file for details.
