@@ -1,4 +1,4 @@
-# 24/7 Playout v0.8.18 - OBS Plugin
+# 24/7 Playout v0.8.19 - OBS Plugin
 
 24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, ad handling and transparent browser overlays directly inside OBS.
 
@@ -110,17 +110,17 @@ The program board, info banner and info graphic are transparent, responsive OBS 
 Recommended for most Windows users:
 
 ```text
-24-7-Playout-v0.8.18-windows-x64-installer.exe
+24-7-Playout-v0.8.19-windows-x64-installer.exe
 ```
 
 Manual installation package:
 
 ```text
-24-7-Playout-v0.8.18-windows-x64.zip
+24-7-Playout-v0.8.19-windows-x64.zip
 ```
 
 Source code archive:
 
 ```text
-24-7-Playout-v0.8.18-source.zip
+24-7-Playout-v0.8.19-source.zip
 ```
