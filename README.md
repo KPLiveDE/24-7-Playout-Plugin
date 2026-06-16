@@ -1,49 +1,57 @@
-# 24/7 Playout v0.8.19 - OBS Plugin
+# 24/7 Playout - OBS Plugin
 
-24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, ad handling and transparent browser overlays directly inside OBS.
+24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, ad handling, transparent browser overlays and optional live-feed integration directly inside OBS.
 
-This release provides the Windows x64 installer and the Windows x64 ZIP package. The ZIP package includes the plugin DLL, debug symbols, `yt-dlp.exe`, `ffmpeg.exe`, documentation and the GPL license file.
+The plugin supports local videos, folders, external video links, Twitch VODs and live-feed sources inside the same rundown. It can automatically update Twitch titles, categories and chat messages, display Now / Next information, manage ads and provide transparent overlays that can be placed above custom backgrounds, videos or stream graphics.
 
+This release provides the Windows x64 installer and the Windows x64 ZIP package. The full package includes the plugin DLL, debug symbols, `yt-dlp.exe`, `ffmpeg.exe`, `mediamtx.exe`, documentation and the GPL license file.
 
 ## Screenshots
 
 ### Main control window
 
-![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-13%20151008.png)
+![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-13%20151008.png)
 
 ### Interface and overlay examples
 
-![24/7 Playout interface screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20202907.png)
+![24/7 Playout interface screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20202907.png)
 
-![24/7 Playout interface screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203101.png)
+![24/7 Playout interface screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203101.png)
 
-![24/7 Playout overlay screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203848.png)
+![24/7 Playout overlay screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203848.png)
 
-![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203821.png)
+![24/7 Playout overlay screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203821.png)
 
-### Twitch Integration and Video Edit
+### Twitch integration and metadata
 
-![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203635.png)
+![24/7 Playout Twitch screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203635.png)
 
-![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20204021.png)
+![24/7 Playout Twitch screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20204021.png)
 
-![24/7 Playout overlay screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-OBS-Plugin/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20204036.png)
+![24/7 Playout Twitch screenshot 3](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20204036.png)
 
-![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-OBS-Plugin/blob/28bdc4b1dd3aef3cc2f2abf65403ce606d1e2208/img/Screenshot%202026-06-12%20203657.png)
+![24/7 Playout Twitch screenshot 4](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203657.png)
 
 ## Highlights
 
 - OBS Tools menu integration via `Tools > 24/7 Playout`
-- Local media library for videos, folders and video links
+- Local media library for videos, folders, video links, Twitch VODs and live-feed entries
 - Drag and drop support for videos and folders
 - Playlist / rundown management for continuous playout
 - Planned start and end times based on the current rundown
 - Live rundown timing updates during playback and video changes
 - Visual rundown markers for orientation without changing playback behavior
+- Copy and paste support for playlist entries and markers
+- Right-click actions for playlist entries such as copy, paste, duplicate, edit and remove
+- Optional automatic scrolling to the currently active rundown entry
 - Now / Next display with progress, remaining time and upcoming video information
+- Twitch VOD metadata detection including title, duration, resolution and preview thumbnail
+- Live-feed entries with configurable runtime and signal status display
+- Optional local MediaMTX live server integration for RTMP, SRT, RTSP and WebRTC workflows
 - Dedicated OBS media source named `24/7 Playout Feed`
 - OBS scene integration for playout and ad scenes
 - Twitch automation for stream titles, categories, chat messages and ad breaks
+- Per-entry Twitch category field directly in the metadata editor
 - Stream title prefix and suffix support
 - Optional ad mode with Twitch ads, ad scene/program board mode or ads off
 - Transparent and responsive browser overlays for program board, info banner and info graphic
@@ -58,7 +66,7 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 ### Option 1: Installer
 
 1. Close OBS Studio completely.
-2. Download and run `24-7-Playout-v0.8.18-windows-x64-installer.exe`.
+2. Download and run the Windows x64 installer.
 3. Select your OBS Studio installation folder.
 4. Complete the installation.
 5. Start OBS Studio.
@@ -67,7 +75,7 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 ### Option 2: Manual ZIP Installation
 
 1. Close OBS Studio completely.
-2. Download `24-7-Playout-v0.8.18-windows-x64.zip`.
+2. Download the Windows x64 ZIP package.
 3. Extract the ZIP file.
 4. Copy the contents of the `OBS-Studio` folder into your OBS Studio installation folder.
 5. Merge folders when Windows asks.
@@ -87,6 +95,7 @@ OBS-Studio/
       playout-247-plugin/
         ffmpeg.exe
         yt-dlp.exe
+        mediamtx.exe
         locale/
           en-US.ini
 ```
@@ -95,13 +104,12 @@ OBS-Studio/
 
 The program board, info banner and info graphic are transparent, responsive OBS browser overlays. They can be used at different browser source sizes while keeping their proportions intact, and can be placed above custom backgrounds, images, videos or stream graphics.
 
-
-
 ## Notes
 
 - This is a Windows x64 release.
 - OBS Studio 32.x or a compatible version is recommended.
 - Twitch automation requires Twitch authorization inside the plugin.
+- Live-feed workflows can optionally use the included local MediaMTX server.
 - After updating the plugin, restart OBS Studio completely.
 - Source code is available in this repository.
 
@@ -110,17 +118,17 @@ The program board, info banner and info graphic are transparent, responsive OBS 
 Recommended for most Windows users:
 
 ```text
-24-7-Playout-v0.8.19-windows-x64-installer.exe
+Windows x64 installer
 ```
 
 Manual installation package:
 
 ```text
-24-7-Playout-v0.8.19-windows-x64.zip
+Windows x64 ZIP package
 ```
 
 Source code archive:
 
 ```text
-24-7-Playout-v0.8.19-source.zip
+Source ZIP package
 ```
