@@ -11,6 +11,7 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 ### Main control window
 
 ![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-13%20151008.png)
+![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-19%20102401.png)
 
 ### Interface and overlay examples
 
@@ -33,11 +34,14 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 ![24/7 Playout Twitch screenshot 4](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203657.png)
 
 ## Highlights
+![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-19%20102401.png)
+
 
 - OBS Tools menu integration via `Tools > 24/7 Playout`
 - Local media library for videos, folders, video links, Twitch VODs and live-feed entries
 - Drag and drop support for videos and folders
 - Playlist / rundown management for continuous playout
+- Calendar overview for the playlist / rundown.
 - Planned start and end times based on the current rundown
 - Live rundown timing updates during playback and video changes
 - Visual rundown markers for orientation without changing playback behavior
