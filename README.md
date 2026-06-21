@@ -1,10 +1,12 @@
 # 24/7 Playout - OBS Plugin
 
-24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, ad handling, transparent browser overlays and optional live-feed integration directly inside OBS.
+24/7 Playout is an OBS Studio plugin that helps creators run structured 24/7 streams by combining media library management, playlist/rundown playback, live timing, Twitch metadata automation, chat messages, Discord notifications, web widgets, ad handling, transparent browser overlays and optional live-feed integration directly inside OBS.
 
 The plugin supports local videos, folders, external video links, Twitch VODs and live-feed sources inside the same rundown. It can automatically update Twitch titles, categories and chat messages, display Now / Next information, manage ads and provide transparent overlays that can be placed above custom backgrounds, videos or stream graphics.
 
 This release provides the Windows x64 installer and the Windows x64 ZIP package. The full package includes the plugin DLL, debug symbols, `yt-dlp.exe`, `ffmpeg.exe`, `mediamtx.exe`, documentation and the GPL license file.
+
+---
 
 ## Screenshots
 
@@ -12,6 +14,12 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 
 ![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-13%20151008.png)
 ![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-19%20102401.png)
+
+### Discord notifications and web widget
+
+![Discord WebSocket Notifications](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-21%20115550.png)
+
+![24/7 Playout Web Widget](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-21%20115050.png)
 
 ### Interface and overlay examples
 
@@ -33,15 +41,15 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 
 ![24/7 Playout Twitch screenshot 4](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203657.png)
 
-## Highlights
-![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-19%20102401.png)
+---
 
+## Highlights
 
 - OBS Tools menu integration via `Tools > 24/7 Playout`
 - Local media library for videos, folders, video links, Twitch VODs and live-feed entries
 - Drag and drop support for videos and folders
 - Playlist / rundown management for continuous playout
-- Calendar overview for the playlist / rundown.
+- Calendar overview for the playlist / rundown
 - Planned start and end times based on the current rundown
 - Live rundown timing updates during playback and video changes
 - Visual rundown markers for orientation without changing playback behavior
@@ -64,6 +72,21 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 - Optional OBS stream auto-reconnect for long Twitch streams
 - English and German UI language support
 - Configuration backup, restore, auto-recovery and safer saving
+- Discord WebSocket integration for automatic notifications
+- Notifications when videos or rundown entries change
+- Web widget for showing current and next playback content
+- Automatic grouping of consecutive videos by Twitch category in the web widget
+- Built-in Twitch chat commands (`!now`, `!next`, `!schedule`, `!commands`)
+- Customizable chat commands
+- Optional moderator-only command mode
+- Chat command cooldown system to prevent spam
+- Completely redesigned settings interface with subtabs
+- New UI themes: Standard, Dark, Gray, Twitch Mode
+- Calendar updates now refresh instantly on playlist changes
+- Fixed German and English translations across multiple UI areas
+- Added proper German umlaut support
+
+---
 
 ## Installation
 
@@ -82,7 +105,7 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 2. Download the Windows x64 ZIP package.
 3. Extract the ZIP file.
 4. Copy the contents of the `OBS-Studio` folder into your OBS Studio installation folder.
-5. Merge folders when Windows asks.
+5. Merge folders when prompted.
 6. Start OBS Studio.
 7. Open `Tools > 24/7 Playout`.
 
@@ -102,6 +125,9 @@ OBS-Studio/
         mediamtx.exe
         locale/
           en-US.ini
+          de-DE.ini
+
+          
 ```
 
 ## Browser Sources
