@@ -12,8 +12,8 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 
 ### Main control window
 
-![24/7 Playout main control window](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-13%20151008.png)
-![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-19%20102401.png)
+![24/7 Playout main control window](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-21%20115138.png)
+![24/7 Playout Planning Calendar](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-21%20115242.png)
 
 ### Discord notifications and web widget
 
@@ -27,7 +27,7 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 
 ![24/7 Playout interface screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203101.png)
 
-![24/7 Playout overlay screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203821.png)
+![24/7 Playout overlay screenshot 2](https://github.com/KPLiveDE/24-7-Playout-Plugin/blob/main/img/Screenshot%202026-06-21%20115319.png)
 
 ### Twitch integration and metadata
 
