@@ -27,8 +27,6 @@ This release provides the Windows x64 installer and the Windows x64 ZIP package.
 
 ![24/7 Playout interface screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203101.png)
 
-![24/7 Playout overlay screenshot 1](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203848.png)
-
 ![24/7 Playout overlay screenshot 2](https://raw.githubusercontent.com/KPLiveDE/24-7-Playout-Plugin/main/img/Screenshot%202026-06-12%20203821.png)
 
 ### Twitch integration and metadata
